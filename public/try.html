@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+
+function playmusic()
+{
+    function autoPlay(){//自动播放
+     var myAuto = document.getElementById('myaudio');
+     myAuto.src = '/img/bensound-hey.mp3';//MP3路径
+     myAuto.play();
+}
+function pausePlay(){//暂停播放
+  var myAuto = document.getElementById('myaudio');
+   myAuto.pause(); 
+}
+function createAuto(){
+    var _id = $("#audio");
+    if (window.applicationCache) {
+         _id.html('<audio id="myaudio" src="" controls="controls" loop="false" hidden="true"></audio>')
+            } else {
+            _id.html('<embed src="" id="myaudio" style="display: none;"></embed>'); 
+       }
+ }
+创建方式
+createAuto();
+
+}
+</script>
+</head>
+<body>
+    
+
+<br><br>
+<button onclick="playmusic()">复制文本</button>
+
+</body>
+</html>

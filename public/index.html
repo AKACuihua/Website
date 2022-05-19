@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>In KTV, which song can you sing to shine out among the crowd?
+  </title>
+  <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+  <meta name="keywords"
+    content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
+
+  <style>
+    .bar {
+      fill: lightblue;
+    }
+
+    .highlight {
+      fill: orange;
+    }
+
+    body {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+  </style>
+
+
+
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+<script src="http://raw.githubusercontent.com/eligrey/FileSaver.js/master/FileSaver.min.js"></script>
+<!-- canvg -->
+<script type="text/javascript" src="http://gabelerner.github.io/canvg/rgbcolor.js"></script> 
+<script type="text/javascript" src="http://gabelerner.github.io/canvg/StackBlur.js"></script>
+<script type="text/javascript" src="http://gabelerner.github.io/canvg/canvg.js"></script>
+
+  <link rel="stylesheet" href="css/styles-merged.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/kelly.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+   
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+
+
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/wc.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/geodata/data/countries2.js"></script>
+
+  <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <script src="js/chart1.js"></script>
+  <script src="js/chart2.js"></script>
+  <script src="js/chart3.js"></script>
+  <script src="js/piechart1.js"></script>
+  <script src="js/XYChart.js"></script>
+  <script src="js/drawMapChart.js"></script>
+  <script src="/js/drawAmCharts1.js"></script>
+  <script src="/js/drawAmCharts2.js"></script>
+  <script src="/js/drawAmCharts3.js"></script>
+  <script src="/js/makeAjaxCalls.js"></script>
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default probootstrap-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html" title="uiCookies:Frame">REFRESH</a>
+      </div>
+
+      <div id="navbar-collapse" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#" data-nav-section="home">Home</a></li>
+          <li><a href="#" data-nav-section="part1">Start</a></li>
+          <li><a href="#background" data-nav-section="background">Background</a></li>
+          <li><a href="#shining songs" data-nav-section="shining songs">Shining Songs</a></li>
+          <li><a href="#" data-nav-section="our team">Our Team</a></li>
+          <li><a href="#" data-nav-section="conclusion">Conclusion</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="probootstrap-hero pro http://localhost/probootstrap/frame/#featuresbootstrap-slant"
+    style="background-image: url(img/1535097367434spsorqrp76.gif);" data-section="home"
+    data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row intro-text">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <h1 class="probootstrap-heading probootstrap-animate">In KTV, which song can you sing to shine out among the
+            crowd?
+            <em></em>
+          </h1>
+          <div class="probootstrap-subheading center">
+            <p class="probootstrap-animate">
+
+              <a href="#background" class="btn btn-default smoothscroll" role="button">See Charts</a>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="CD Machine">
+    <div class="CD-photo">
+      <img src="img/CD-Machine-unscreen.gif">
+
+    </div>
+  </section>
+
+  <!--Start-->
+  <section class="probootstrap-section" data-section="part1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+            <span class="icon icon-mic"></span>
+            <h2>Background</h2>
+            <p>China's KTV has four development stage, helped by the colorful chart, you can find the historical chaning
+              trend of KTV number and consumer.
+              <br>
+              Going through the map to figure out the distribution of KTV in China, know your homwtown KTV's condition.
+            </p>
+            <p><a href="#background" class="probootstrap-link">Learn More <i class="icon-chevron-right"></i></a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+            <span class="icon icon-happy"></span>
+            <h2>Your SONG</h2>
+            <p>How to shine out among the crowd?
+              <br>
+              Let's get start with the following chart to find out the answer with the hottest songs!
+            </p>
+            <p><a href="#shining songs" class="probootstrap-link">Learn More <i class="icon-chevron-right"></i></a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+            <span class="icon icon-question"></span>
+            <h2>Questionnaire</h2>
+            <p>We also curious about your "best" songs, help us to finish the questionnaire below, and see others
+              answers at the same time! </p>
+            <p><a href="#" class="probootstrap-link">Learn More <i class="icon-chevron-right"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Timeline-->
+  <section class="probootstrap-section probootstrap-bg-light" id="pricing">
+    <div class="container">
+      <div class="row text-center mb100">
+        <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+          <h2 class="mb30 text-black probootstrap-heading">Timeline of KTV Development</h2>
+          <p>Have you noticed that KTV, once a favorite entertainment scene for young people,
+            seems to have become a thing of the past, whether it is the post-00s, post-90s, or the older post-80s and
+            post-70s generation?
+            Here are the timeline of KTV development, to help you understand more.
+          </p>
+        </div>
+
+      </div>
+      <ul class="timeline">
+        <li>
+          <div class="timeline-image">
+            <h4>
+              Original
+            </h4>
+
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>1</h4>
+              <h4 class="subheading">Germination stage (1988-1994)</h4>
+            </div>
+            <div id="wangqingshui-text" class="timeline-body">
+              <p class="text-muted">The initial form of KTV in China was karaoke hall, which was born in 1988 in
+                Guangzhou Dongfang Hotel.
+                At that time, entertainment is relatively niche. <br><br>
+                Stores are mainly distributed in regions with developed economic development,
+                but due to the influence of restricting factors such as consumption concept and consumption level,
+                the development speed at this stage is relatively slow </p>
+            </div>
+                      <audio id="wangqingshuimusic" preload="auto">
+                         
+              <source src="wangqingshui.mp3">
+                          </source>
+                       
+            </audio>   
+            <script>var wqs = $("#wangqingshuimusic")[0];
+              $("#wangqingshui-text")
+                .mouseenter(function () {
+                  wqs.play();
+                })
+                .mouseout(function () {
+                  wqs.pause();
+                });</script>
+
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <h4>
+              Grow
+              <br />
+              Fast
+            </h4>
+
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>2</h4>
+              <h4 class="subheading">Rapid development stage (1995-2011)</h4>
+            </div>
+            <div id="jiangnan-text" class="timeline-body">
+              <p class="text-muted">In 1995, the first KTV from Taiwan settled in Shanghai.
+                In 2000, "mass karaoke" appeared, KTV mass consumption era came, began to spread rapidly in China.
+                <br><br>
+                People's living standards improve, the demand for entertainment consumption increases, the industry
+                ushered in the golden age of development
+              </p>
+            </div>
+                      <audio id="jiangnanmusic" preload="auto">
+                         
+              <source src="jiangnan.mp3">
+                          </source>
+                       
+            </audio>   
+            <script>var jn = $("#jiangnanmusic")[0];
+              $("#jiangnan-text")
+                .mouseenter(function () {
+                  jn.play();
+                })
+                .mouseout(function () {
+                  jn.pause();
+                });</script>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-image">
+            <h4>
+              Tough
+              <br />
+              Recession
+            </h4>
+
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>3</h4>
+              <h4 class="subheading">Downturn stage (2012-2015)</h4>
+            </div>
+            <div id="paomo-text" class="timeline-body">
+              <p class="text-muted">In 2012, KTV entered a downturn due to the impact of diversified entertainment forms
+                and the implementation of the three-public consumption ban.<br><br>
+                The increasing choice of entertainment consumption and the state's restrictions on "three-official
+                consumption" have impacted the development of the industry
+              </p>
+            </div>
+                      <audio id="paomomusic" preload="auto">
+                         
+              <source src="paomo.mp3">
+                          </source>
+                       
+            </audio>   
+            <script>var pm = $("#paomomusic")[0];
+              $("#paomo-text")
+                .mouseenter(function () {
+                  pm.play();
+                })
+                .mouseout(function () {
+                  pm.pause();
+                });</script>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <h4>
+              Change
+              <br />
+              Time
+            </h4>
+
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>4</h4>
+              <h4 class="subheading">Transition period (2016-present)</h4>
+            </div>
+            <div id="blackpink-text" class="timeline-body">
+              <p class="text-muted">Since 2016, KTV industry has entered a transition period.
+                But the emergence of the epidemic has brought challenges to the KTV industry.
+                <br><br>
+                With the support of government policies and the assistance of Internet technology,
+                the industry has been on the road of transformation and the business situation has gradually improved.
+              </p>
+            </div>
+                      <audio id="blackpinkmusic" preload="auto">
+                         
+              <source src="blackpink.mp3">
+                          </source>
+                       
+            </audio>   
+            <script>var jihengxuan = $("#blackpinkmusic")[0];
+              $("#blackpink-text")
+                .mouseenter(function () {
+                  jihengxuan.play();
+                })
+                .mouseout(function () {
+                  jihengxuan.pause();
+                });</script>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <h4>
+
+            </h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <br><br>
+  <br><br>
+
+  <!-- 新加的 KTV Background -->
+  <section data-section="background" id="background">
+    <div class="container">
+      <div class="row text-center mb100">
+        <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+          <h2 class="mb30 text-black probootstrap-heading">KTV Background</h2>
+          <p>The development course of traditional KTV is mainly divided into four stages: germination stage, rapid
+            development stage, downturn stage and transition period.</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-8 col-md-pull-2 probootstrap-animate">
+          <div>
+            <div class="col-md-12 mb110" id="chartdiv0" style="height:700px"></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
+          <h3 class="text-primary probootstrap-heading-2">Change in number of KTV（2009-2019）</h3>
+          <p>
+          <p>During the pandemic, KTV entertainment venues across the country were in a slump.
+            Enterprise chumcha data shows that up to now, China's offline KTV entertainment enterprises have a total of
+            63,000, and 38,000 enterprises have been cancelled or revoked.
+          </p>
+          </p>
+          <ul class="probootstrap-list">
+            <li class="probootstrap-check"></li>
+            <li class="probootstrap-check">Revocation of registration suddenly increase from 2017 to 2019</li>
+            <li class="probootstrap-check">Covid-19: Damage the KTV development badly</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- D3 -->
+
+      <div class="row mb100">
+        <div class="col-md-8 col-md-push-5 probootstrap-animate">
+          <div class="col-md-12 mb120" id="chartdiv10" style="height:500px; padding: left auto;">
+            <svg width="600" height="500"></svg>
+            <script>
+
+              var svg = d3.select("svg"),
+                margin = 200,
+                width = svg.attr("width") - margin,
+                height = svg.attr("height") - margin;
+
+              svg.append("text")
+                .attr("transform", "translate(100,0)")
+                .attr("x", 50)
+                .attr("y", 50)
+                .attr("font-size", "20px")
+                .text("Changes of people through years")
+
+              var x = d3.scaleBand().range([0, width]).padding(0.4),
+                y = d3.scaleLinear().range([height, 0]);
+
+              var g = svg.append("g")
+                .attr("transform", "translate(" + 100 + "," + 100 + ")");
+
+              data = [
+                {
+                  "year": "2011",
+                  "value": "1404011"
+                },
+                {
+                  "year": "2012",
+                  "value": "2500512"
+                },
+                {
+                  "year": "2013",
+                  "value": "3919903"
+                },
+                {
+                  "year": "2014",
+                  "value": "11260014"
+                },
+                {
+                  "year": "2015",
+                  "value": "24091020"
+                },
+                {
+                  "year": "2016",
+                  "value": "26745576"
+                },
+                {
+                  "year": "2017",
+                  "value": "40297577"
+                },
+                {
+                  "year": "2018",
+                  "value": "48458902"
+                },
+                {
+                  "year": "2019",
+                  "value": "36829071"
+                },
+                {
+                  "year": "2020",
+                  "value": "27937490"
+                }
+              ]
+
+              x.domain(data.map(function (d) { return d.year; }));
+              y.domain([0, d3.max(data, function (d) { return d.value; })]);
+
+              g.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+                .append("text")
+                .attr("y", height - 250)
+                .attr("x", width - 100)
+                .attr("text-anchor", "end")
+                .attr("stroke", "black")
+
+              g.append("g")
+                .call(d3.axisLeft(y).tickFormat(function (d) {
+                  return d;
+                }).ticks(10))
+                .append("text")
+                .attr("transform", "rotate(0)")
+                .attr("y", 6)
+                .attr("dy", "-5.1em")
+                .attr("text-anchor", "end")
+                .attr("stroke", "black")
+                .text("Amount of people");
+
+              g.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .on("mouseover", onMouseOver) //Add listener for the mouseover event
+                .on("mouseout", onMouseOut)   //Add listener for the mouseout event
+                .attr("x", function (d) { return x(d.year); })
+                .attr("y", function (d) { return y(d.value); })
+                .attr("width", x.bandwidth())
+                .transition()
+                .ease(d3.easeLinear)
+                .duration(400)
+                .delay(function (d, i) {
+                  return i * 50;
+                })
+                .attr("height", function (d) { return height - y(d.value); });
+
+              //mouseover event handler function
+              function onMouseOver(d, i) {
+                d3.select(this).attr('class', 'highlight');
+                d3.select(this)
+                  .transition()     // adds animation
+                  .duration(400)
+                  .attr('width', x.bandwidth() + 5)
+                  .attr("y", function (d) { return y(d.value) - 10; })
+                  .attr("height", function (d) { return height - y(d.value) + 10; });
+
+                g.append("text")
+                  .attr('class', 'val')
+                  .attr('x', function () {
+                    return x(d.year);
+                  })
+                  .attr('y', function () {
+                    return y(d.value) - 15;
+                  })
+                  .text(function () {
+                    return [d.value + ' person'];  // Value of the text
+                  });
+              }
+
+              //mouseout event handler function
+              function onMouseOut(d, i) {
+                // use the text label class to remove label on mouseout
+                d3.select(this).attr('class', 'bar');
+                d3.select(this)
+                  .transition()     // adds animation
+                  .duration(400)
+                  .attr('width', x.bandwidth())
+                  .attr("y", function (d) { return y(d.value); })
+                  .attr("height", function (d) { return height - y(d.value); });
+
+                d3.selectAll('.val')
+                  .remove()
+              }
+
+            </script>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-pull-8 probootstrap-section-heading">
+          <h3 class="text-primary probootstrap-heading-2">Change in number of consumer</h3>
+          <p>
+          <p>Due to the other new form of entertaionment, there is a sharked decrease in the number of consumer in KTV.
+            Additionally, the development also be influenced by the pandemic.
+          </p>
+          </p>
+          <ul class="probootstrap-list">
+            <li class="probootstrap-check">Steady rise between 2014-2018</li>
+            <li class="probootstrap-check">In 2020, the consumer number back to five years ago </li>
+          </ul>
+        </div>
+      </div>
+
+        <!--D3 2-->
+        <div class="row">
+          <div class="col-md-8 col-md-pull-3 probootstrap-animate">
+            <div class="col-md-12 mb120" style=" padding:left auto;">
+
+              <h1>Diverging Stacked Bar Chart</h1>
+        
+              <div id="figure"></div>
+                <canvas id="mycanvas" width="500px" height="300px"></canvas>
+              <script>
+        
+                function saveSVG()
+                {
+                    var element = document.getElementById('d3-plot');
+                    var svgAsString = new XMLSerializer().serializeToString(element);
+                    var svgBlob = new Blob([svgAsString], {type: "image/svg+xml;charset=utf-8"});
+                    saveAs(svgBlob, "figure.svg");
+                }
+                
+                function savePNG()
+                {
+                    var canvas = document.getElementById("mycanvas"), ctx = canvas.getContext("2d");
+                    canvas.toBlob(function(blob) {
+                    saveAs(blob, "figure.png");
+                    });
+                }
+                
+                var margin = {top: 50, right: 20, bottom: 10, left: 65},
+                    width = 800 - margin.left - margin.right,
+                    height = 600 - margin.top - margin.bottom;
+                
+                var y = d3.scale.ordinal()
+                    .rangeRoundBands([0, height], .3);
+                
+                var x = d3.scale.linear()
+                    .rangeRound([0, width]);
+                
+                var color = d3.scale.ordinal()
+                    .range(["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad"]);
+                
+                var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("top");
+                
+                var yAxis = d3.svg.axis()
+                    .scale(y)
+                    .orient("left")
+                
+                var svg = d3.select("#figure").append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .attr("id", "d3-plot")
+                  .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                
+                  color.domain(["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]);
+                
+                  data = [
+                  {
+                    "1": 10,
+                    "2": 26,
+                    "3": 50,
+                    "4": 60,
+                    "5": 78,
+                    "Question": "Question 1",
+                    "N": 224
+                  },
+                  {
+                    "1": 5,
+                    "2": 10,
+                    "3": 20,
+                    "4": 60,
+                    "5": 66,
+                    "Question": "Question 2",
+                    "N": 161
+                  },
+                  {
+                    "1": 20,
+                    "2": 23,
+                    "3": 50,
+                    "4": 45,
+                    "5": 39,
+                    "Question": "Question 3",
+                    "N": 177
+                  },
+                  {
+                    "1": 0,
+                    "2": 10,
+                    "3": 33,
+                    "4": 45,
+                    "5": 39,
+                    "Question": "Question 4",
+                    "N": 127
+                  },
+                  {
+                    "1": 67,
+                    "2": 49,
+                    "3": 23,
+                    "4": 16,
+                    "5": 4,
+                    "Question": "Question 5",
+                    "N": 159
+                  },
+                ]
+                
+                  data.forEach(function(d) {
+                    // calc percentages
+                    d["Strongly disagree"] = +d[1]*100/d.N;
+                    d["Disagree"] = +d[2]*100/d.N;
+                    d["Neither agree nor disagree"] = +d[3]*100/d.N;
+                    d["Agree"] = +d[4]*100/d.N;
+                    d["Strongly agree"] = +d[5]*100/d.N;
+                    var x0 = -1*(d["Neither agree nor disagree"]/2+d["Disagree"]+d["Strongly disagree"]);
+                    var idx = 0;
+                    d.boxes = color.domain().map(function(name) { return {name: name, x0: x0, x1: x0 += +d[name], N: +d.N, n: +d[idx += 1]}; });
+                  });
+                
+                  var min_val = d3.min(data, function(d) {
+                          return d.boxes["0"].x0;
+                          });
+                
+                  var max_val = d3.max(data, function(d) {
+                          return d.boxes["4"].x1;
+                          });
+                
+                  x.domain([min_val, max_val]).nice();
+                  y.domain(data.map(function(d) { return d.Question; }));
+                
+                  svg.append("g")
+                      .attr("class", "x axis")
+                      .call(xAxis);
+                
+                  svg.append("g")
+                      .attr("class", "y axis")
+                      .call(yAxis)
+                
+                  var vakken = svg.selectAll(".question")
+                      .data(data)
+                    .enter().append("g")
+                      .attr("class", "bar")
+                      .attr("transform", function(d) { return "translate(0," + y(d.Question) + ")"; });
+                
+                  var bars = vakken.selectAll("rect")
+                      .data(function(d) { return d.boxes; })
+                    .enter().append("g").attr("class", "subbar");
+                
+                  bars.append("rect")
+                      .attr("height", y.rangeBand())
+                      .attr("x", function(d) { return x(d.x0); })
+                      .attr("width", function(d) { return x(d.x1) - x(d.x0); })
+                      .style("fill", function(d) { return color(d.name); });
+                
+                  bars.append("text")
+                      .attr("x", function(d) { return x(d.x0); })
+                      .attr("y", y.rangeBand()/2)
+                      .attr("dy", "0.5em")
+                      .attr("dx", "0.5em")
+                      .style("font" ,"10px sans-serif")
+                      .style("text-anchor", "begin")
+                      .text(function(d) { return d.n !== 0 && (d.x1-d.x0)>3 ? d.n : "" });
+                
+                  vakken.insert("rect",":first-child")
+                      .attr("height", y.rangeBand())
+                      .attr("x", "1")
+                      .attr("width", width)
+                      .attr("fill-opacity", "0.5")
+                      .style("fill", "#F5F5F5")
+                      .attr("class", function(d,index) { return index%2==0 ? "even" : "uneven"; });
+                
+                  svg.append("g")
+                      .attr("class", "y axis")
+                  .append("line")
+                      .attr("x1", x(0))
+                      .attr("x2", x(0))
+                      .attr("y2", height);
+                
+                  var startp = svg.append("g").attr("class", "legendbox").attr("id", "mylegendbox");
+                  // this is not nice, we should calculate the bounding box and use that
+                  var legend_tabs = [0, 120, 200, 375, 450];
+                  var legend = startp.selectAll(".legend")
+                      .data(color.domain().slice())
+                    .enter().append("g")
+                      .attr("class", "legend")
+                      .attr("transform", function(d, i) { return "translate(" + legend_tabs[i] + ",-45)"; });
+                
+                  legend.append("rect")
+                      .attr("x", 0)
+                      .attr("width", 18)
+                      .attr("height", 18)
+                      .style("fill", color);
+                
+                  legend.append("text")
+                      .attr("x", 22)
+                      .attr("y", 9)
+                      .attr("dy", ".35em")
+                      .style("text-anchor", "begin")
+                      .style("font" ,"10px sans-serif")
+                      .text(function(d) { return d; });
+                
+                  d3.selectAll(".axis path")
+                      .style("fill", "none")
+                      .style("stroke", "#000")
+                      .style("shape-rendering", "crispEdges")
+                
+                  d3.selectAll(".axis line")
+                      .style("fill", "none")
+                      .style("stroke", "#000")
+                      .style("shape-rendering", "crispEdges")
+                
+                  var movesize = width/2 - startp.node().getBBox().width/2;
+                  d3.selectAll(".legendbox").attr("transform", "translate(" + movesize  + ",0)");
+                
+                  // print the svg in a canvas
+                  var element = document.getElementById('d3-plot');
+                  var svgAsString = new XMLSerializer().serializeToString(element);
+                  canvg(document.getElementById('mycanvas'), svgAsString );
+                
+                </script>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
+            <h3 class="text-primary probootstrap-heading-2">The Attitude of Current KTV</h3>
+            <p>
+            <p>The Diverging Stacked Bar Chart is the best way to present the data by using Likert scale</p>
+            <ul class="probootstrap-list">
+              <li class="probootstrap-check">Q1: KTV industry is dying</li>
+              <li class="probootstrap-check">Q2: KTV industry needs to improve or it will be eliminated</li>
+              <li class="probootstrap-check">Q3: The development of contemporary music industry affects the development
+                of
+                KTV</li>
+              <li class="probootstrap-check">Q4: KTV needs government regulation</li>
+              <li class="probootstrap-check">Q5: The golden age of KTV is over</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!--map-->
+        <div class="row mb100">
+          <div class="col-md-8 col-md-push-5 probootstrap-animate">
+            <div class="col-md-12 mb120" id="chartdiv11" style="height:500px; padding: left auto;"></div>
+          </div>
+          <div class="col-md-4 col-md-pull-8 probootstrap-section-heading">
+            <h3 class="text-primary probootstrap-heading-2">The Distribution of KTV in China</h3>
+            <p>KTVS are mostly concentrated in the south of China <br>
+              The number of KTV reflects the level of urban development, first-tier cities have more KTVs
+              Quickly use buoys to try to find the number of KTV in various provinces and cities</p>
+            </p>
+            <ul class="probootstrap-list">
+              <li class="probootstrap-check">Guangdong: the number of KTV ranks first in China</li>
+              <li class="probootstrap-check">Xizang: The number of KTV ranks the last in the country</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <br><br>
+
+
+        <div class="col-md-6 col-md-push-5 probootstrap-animate">
+          <div id="visulizationdiv1" style="height:400px"></div>
+        </div>
+        <div class="row mb110">
+          <div class="col-md-6  col-md-pull-8 probootstrap-section-heading ">
+            <form action="/form" method="POST" class="probootstrap-form" onsubmit="postWithAjax(this);return false;">
+              <h2 class="text-black mt0">How many times do you go to the Karaoke every month:</h2>
+              <div>
+                <span>
+                  <input type="radio" name="times" value="0">Never
+                  <br>
+                  <input type="radio" name="times" value="1-2">1-2 times
+                  <br>
+                  <input type="radio" name="times" value="3-4">3-4 times
+                  <br>
+                  <input type="radio" name="times" value=">4">more than 4 times
+                </span>
+              </div>
+              </p>
+              </p>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Send">
+                <input type="reset" value="Reset Form" />
+              </div>
+            </form>
+  </section>
+  <!-- END section -->
+
+  <!--Songs-->
+  <section class="probootstrap-section probootstrap-bg-light" id="shining songs" data-section="shining songs">
+    <div class="container">
+      <div class="row text-center mb100">
+        <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+          <h2 class="mb30 text-black probootstrap-heading">Songs</h2>
+          <p>KTV has three treasures, control field, control microphone, good voice. A good voice is a gift to god, but as
+            long as you bring your own MAC buff and can control the atmosphere, singing skills can be skillfully
+            avoided.
+            <br><br>
+            Let's see which song can you sing to shine out among the crowd!!
+          </p>
+        </div>
+      </div>
+      <!-- END row -->
+      <div class="row">
+        <div class="col-md-8 col-md-pull-2 probootstrap-animate">
+          <div>
+            <div class="col-md-12 mb110" id="chartdiv" style="height:700px"></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
+          <h3 class="text-primary probootstrap-heading-2">The Unfailing Cantopop</h3>
+          <p>
+          <p>Originated in the 1960s, reached its peak during the economic prosperity of Hong Kong in the 1980s and
+            1990s. </p>
+          </p>
+          <ul class="probootstrap-list">
+            <li class="probootstrap-check">The representative singers of the 1980s: <br>
+              Can't avoid Leslie Cheung, Anita Mui, Beyond, Jacky Cheung, Liken
+              In the first decade of this century, eason chan was hard to escape.
+            </li>
+            <li class="probootstrap-check">Unfortunately, the mainland audience's impression of Cantopop is still
+              confined to established singers such as Eason Chan, while the new Generation of Hong Kong singers is
+              barely known on the mainland.</li>
+          </ul>
+        </div>
+      </div>
+
+      <br><br>
+      <!-- END row -->
+      <div class="row mb100">
+        <!-- <div class="col-md-8 col-md-pull-2"> -->
+        <div class="col-md-8 col-md-push-5 probootstrap-animate">
+          <div class="col-md-12" id="chartdiv2" style="height:500px"></div>
+                    <audio id="beep-one" preload="auto">
+                       
+            <source src="img/fukua.mp3">
+                        </source>
+                     
+          </audio>   
+          <script>var beepOne = $("#beep-one")[0];
+            $("#chartdiv2")
+              .mouseenter(function () {
+                beepOne.play();
+              })
+              .mouseout(function () {
+                beepOne.pause();
+              });</script>
+        </div>
+        <!-- <div class="col-md-4 col-md-pull-1"> -->
+        <div class="col-md-4 col-md-pull-8 probootstrap-section-heading">
+          <h3 class="text-primary probootstrap-heading-2">The Top-Ranking Songs in KTV</h3>
+          <p>
+          <p>Which songs can make you shine at KTV? <br>
+            Many of the songs on the Top25 list are songs that need to hit the high notes.
+          </p>
+          </p>
+          <ul class="probootstrap-list">
+            <li class="probootstrap-check">"Compulsory courses"</li>
+            <li class="probootstrap-check">Eason Chan's "Grandiose" topped the list of most-viewed songs, while Xin
+              Orchestra's "All Dead Want to Love" ranked second.</li>
+
+          </ul>
+        </div>
+      </div>
+      <!-- END row -->
+
+      <div class="row mb100">
+        <div class="col-md-8 col-md-pull-2 probootstrap-animate">
+          <div class="col-md-12 mb110" id="chartdiv3" style="height:500px"></div>
+        </div>
+        <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
+          <h3 class="text-primary probootstrap-heading-2">KTV Hottest Singer</h3>
+          <p>
+          <p>The top three singers were Eason Chan, Jay Chou and JJ, on the whole, there are
+            still more old faces, with many Hong Kong and Taiwan singers who populated in the 1980s and 1990s.</p>
+          </p>
+          <ul class="probootstrap-list">
+            <li class="probootstrap-check">Most popular: Cantopop songs</li>
+            <li class="probootstrap-check">Prefer to sing love songs</li>
+            <li class="probootstrap-check">Decade: Focus on the 80s and 90s</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="height: 500px" class="row mb100">
+                <div class="input_container">
+                    <div class="probootstrap-form col-md-4 col-md-push-1">
+                        <h2 class="text-black mt0">What is your favourite singer in KTV?</h2>
+                        <input type="text" id="text" />
+                        <div class="form-group">
+                            <br>
+                            <input type="submit" id="submit" class="btn btn-primary" value="Send">
+                          </div>
+                      </div>
+                  </div>
+
+                <div class="col-md-6 col-md-push-2 probootstrap-animate" style="height: 500px;" id="container">
+
+                  </div>
+              </div>
+
+           
+      <script>
+        var data = [];
+        draw(data)
+        // code to create a word cloud chart will be here
+        document.getElementById("submit").addEventListener("click", () => {
+          var date = new Date();
+          var year = date.getFullYear();
+          var month = ("0" + (1 + date.getMonth())).slice(-2);
+          var day = ("0" + date.getDate()).slice(-2);
+
+
+          data.push({
+            "x": document.getElementById("text").value,
+            "value": Math.random(),
+            //"date": year + "/" + month + "/" + day
+          })
+          document.getElementById("container").innerHTML = ""
+          document.getElementById("text").value = ""
+          draw(data)
+          console.log(data)
+        });
+
+
+        function draw(data) {
+          var chart = anychart.tagCloud(data);
+          // set a chart title
+          chart.title('word cloud')
+          chart.mode("spiral");
+          chart.tooltip().format(" ");
+          // set an array of angles at which the words will be laid out
+          chart.angles([-90, 0, 90]);
+          // enable a color range
+          // chart.colorRange(true);
+          // set the color range length
+          chart.colorRange().length('80%');
+          // display the word cloud chart
+          chart.container("container");
+          chart.draw();
+        }
+      </script>
+
+      <!-- END row -->
+      <div>
+        <div class="row mb100">
+          <div class="col-md-8 col-md-pull-2 probootstrap-animate">
+            <div class="col-md-12 mb120" id="visulizationdiv2" style="height:500px; padding: left auto;"></div>
+          </div>
+          <div class="col-md-4 col-md-pull-1 probootstrap-section-heading" class="probootstrap-form">
+            <form action="/form" method="POST" class="probootstrap-form" onsubmit="postWithAjax(this);return false;">
+              <h2 class="text-black mt0">Which kind of song do you sing in Karaoke:</h2>
+              <div>
+                <select name="musictype">
+                  <option value="">Please select a type:</option>
+                  <option value="pop">Pop song</option>
+                  <option value="can">Cantinese Golden Melody</option>
+                  <option value="rock">Rock</option>
+                  <option value="folk">Folk</option>
+                  <option value="rap">Rap</option>
+                  <option value="other">Other</option>
+                </select>
+                </p>
+                </p>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary" value="Send">
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- END row -->
+
+      <div class="row mb100">
+        <div class="col-md-8 col-md-pull-2 probootstrap-animate">
+          <div class="col-md-12 mb120" id="chartdiv5" style="height:400px; padding: left auto;"></div>
+        </div>
+
+        <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
+          <h3 class="text-primary probootstrap-heading-2">"Shining Songs"</h3>
+          <p>
+          <p>The songs you sing reveal your character and taste.
+            After a popular family song for all ages, everyone is watching what you're going to sing next.
+          </p>
+          </p>
+          <ul class="probootstrap-list">
+            <li class="probootstrap-check">Friends：With best friends, you will play 《大悲咒》《葫芦娃》, and dance together in
+              KTV.</li>
+            <li class="probootstrap-check">Elder：Close the distance with your elders with a red song, and then show your
+              loyalty to the leadership with a song 《精忠报国》.</li>
+            <li class="probootstrap-check">Junior：Naughty with the younger generation, in the KTV from time to time, you
+              may sing two or three high notes</li>
+          </ul>
+        </div>
+      </div>
+
+  </section>
+  <!-- END section -->
+
+  <!--team-->
+  <br><br>
+  <br><br>
+
+  <section data-section="our team">
+    <div class="container">
+      <div class="row text-center mb100">
+        <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+          <h2 class="mb30 text-black probootstrap-heading">Our Team</h2>
+          <p>3 DMC students</p>
+          <p>SUN Silin & HUANG Zhehan & Ji Hengxuan </p>
+        </div>
+      </div>
+      <!-- END row -->
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="probootstrap-testimonial">
+            <p><img src="img/beauty1.jpg" alt="Free Template by uicookies.com" class="img-responsive"></p>
+            <p class="mb10 probootstrap-rate">
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+            </p>
+            <p class="mb0">&mdash; Photo taken by HUANG Zhehan</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="probootstrap-testimonial">
+            <p><img src="img/beauty3.gif" alt="Free Template by uicookies.com" class="img-responsive"></p>
+            <p class="mb10 probootstrap-rate">
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+            </p>
+            <p class="mb0">&mdash; Photo taken by Ji Hengxuan</p>
+          </div>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="probootstrap-testimonial">
+            <p><img src="img/beauty2.jpg" alt="Free Template by uicookies.com" class="img-responsive"></p>
+            <p class="mb10 probootstrap-rate">
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+            </p>
+
+            <p class="mb0">&mdash; Photo taken by SUN Silin</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section probootstrap-cta" id="conclusion" data-section="conclusion">
+    <div class="container">
+      <div class="row text-center mb100">
+        <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+          <h2 class="probootstrap-heading">Conclusion</h2>
+          <p class="probootstrap-sub-heading">In this website we introduced the development of KTV and the public
+            behavior in KTV.
+            Hurry up and follow us to shine out in the KTV.</p>
+          <p><a href="#" class="btn btn-black">Get Started</a></p>
+        </div>
+
+      </div>
+      <div class="row text-center">
+        <p>Reference:</p>
+        <p>https://m.sohu.com/a/415228379_653225/?pvid=000115_3w_a</p>
+        <p> http://www.baogaolaile.com/6255.html</p>
+        <p> http://datagoo.com/post/300</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="probootstrap-footer">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="probootstrap-social">
+            <a href="https://www.facebook.com/profile.php?id=100041145945598""><i class=" icon-facebook2"></i></a>
+            <a href="https://www.instagram.com/sun.silin/"><i class="icon-instagram2"></i></a>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          &copy; 2017 <a href="https://uicookies.com/">uiCookies:Frame</a>. All Rights Reserved. <br> Designed &amp;
+          Developed by <a href="https://uicookies.com">uicookies.com</a> <br> Demo Images by <a
+            href="https://unsplash.com">Unsplash</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="js/scripts.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/sound.js"></script>
+</body>
+
+</html>
